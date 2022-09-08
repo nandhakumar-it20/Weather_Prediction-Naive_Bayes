@@ -3,12 +3,11 @@ import pandas as pd
 import time
 
 st.title('Weather Prediction using Python')
-st.header('Predicting Weather using the uploaded csv file')
+st.caption('Predicting Weather using the uploaded csv file')
 st.info("Developed by NANDHAKUMAR S, SUJITH V, MOHAMED RAFEEK S, DHIVAKAR S [Daisi Hackathon]")
 st.snow()
 with st.spinner('Loading...'):
     time.sleep(3)
-st.success('Done!')
 uploaded_files = st.file_uploader("Choose a CSV file to process", accept_multiple_files=True)
 for uploaded_file in uploaded_files:
      bytes_data = uploaded_file.read()
