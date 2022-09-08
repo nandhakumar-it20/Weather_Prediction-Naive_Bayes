@@ -13,7 +13,7 @@ from sklearn.metrics import confusion_matrix
 with st.spinner('Loading...'):
     time.sleep(1)
 st.title('Weather Prediction using Python')
-st.caption('Predicting Weather using the uploaded csv file')
+st.caption('Predicting Weather using the dataset fetched from openml')
 st.info("Developed by NANDHAKUMAR S, SUJITH V, MOHAMED RAFEEK S, DHIVAKAR S [Daisi Hackathon]")
 st.snow()
   
