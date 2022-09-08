@@ -6,7 +6,9 @@ from sklearn import datasets
 from sklearn import metrics
 from sklearn.naive_bayes import GaussianNB, MultinomialNB
 from sklearn.datasets import fetch_openml
-
+import seaborn as sns; 
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix
 
 with st.spinner('Loading...'):
     time.sleep(1)
@@ -98,9 +100,35 @@ def pdFunc(power, mean, std, val):
     b = np.exp(-(diff)/(2*std*std))
     return a*b
 
+likelihoodYes = 2/9 * pdFunc(2,meanYtemp,stdYtemp,77) * pdFunc(2,meanYhumd,stdYhumd,43) * 9/9
+st.write( 'Likelihood(play=yes|E) = {:.8f}'.format(likelihoodYes) )
+
+
+likelihoodNo = 3/5 * pdFunc(2,meanNtemp,stdNtemp,77) * pdFunc(2,meanNhumd,stdNhumd,43) * 5/5
+st.write( 'Likelihood(play=no|E) = {:.8f}'.format(likelihoodNo) )
+
+
+st.write( 'Probability(play=yes|E) = {:.8f}'.format(likelihoodYes/(likelihoodYes+likelihoodNo)) )
+
+st.write( 'Probability(play=no|E) = {:.8f}'.format(likelihoodNo/(likelihoodYes+likelihoodNo)) )
     
-    
-    
+st.write('Accuracy =', metrics.accuracy_score(expected, predicted))
+st.write('Cohen kappa =', metrics.cohen_kappa_score(expected, predicted))
+st.write('Precision =', metrics.precision_score(expected, predicted, average=None))
+st.write('Recall =', metrics.recall_score(expected, predicted, average=None))
+st.write()
+st.write('Metrics =', metrics.precision_recall_fscore_support(expected, predicted, average=None))
+st.write('\nPERFORMANCE REPORT:\n')
+st.write(metrics.classification_report(expected, predicted))
+st.write('CONFUSION MATRIX:\n')
+
+
+sns.set()
+mat = confusion_matrix(expected, predicted)
+sns.heatmap(mat, square=True, annot=True, fmt='d', cbar=False,
+            xticklabels=['no','yes'], yticklabels=['no','yes'])
+plt.xlabel('predicted label')
+plt.ylabel('actual label');  
     
     
     
