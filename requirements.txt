@@ -1,5 +1,7 @@
 altair==4.2.0
 
+scikit-learn==1.1.2
+
 yfinance==0.1.74
 
 attrs==22.1.0
