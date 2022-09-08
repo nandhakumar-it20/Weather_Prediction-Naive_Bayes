@@ -68,7 +68,5 @@ st.write( ' std temperature (play=no)  ={:10.6f}'.format( stdNtemp) )
     
     
     
-    if __name__ == "__main__":
-    # render the app using streamlit ui function
-    st_ui()
+
 
