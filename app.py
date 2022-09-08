@@ -74,13 +74,29 @@ stdNhumd  = df.query('play == "no"').humidity.std()
 st.write( '\nmean humidity (play=no)  ={:10.6f}'.format(meanNhumd) )
 st.write( ' std humidity (play=no)  ={:10.6f}'.format( stdNhumd) )
 
+
 category_columns = ['outlook', 'windy', 'play']
 df[ category_columns] = df[ category_columns].apply(lambda x: pd.factorize(x)[0])
 df
 
 
+model = GaussianNB()
+x = df.loc[:,:'play']
+y = df.loc[:,'play']
+model.fit(x, y)
+st.write( 'Model parameters:', model.get_params() )
 
-    
+
+expected = y
+predicted = model.predict(x)
+st.write('Actual:',    expected)
+st.write('Predicted:', predicted)
+
+def pdFunc(power, mean, std, val):
+    a = 1/(np.sqrt(2*np.pi)*std)
+    diff = np.abs(np.power(val-mean, power))
+    b = np.exp(-(diff)/(2*std*std))
+    return a*b
 
     
     
