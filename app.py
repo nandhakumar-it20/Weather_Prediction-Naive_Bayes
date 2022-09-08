@@ -12,11 +12,7 @@ uploaded_files = st.file_uploader("Choose a CSV file to process", accept_multipl
 for uploaded_file in uploaded_files:
      bytes_data = uploaded_file.read()
      st.write("filename:", uploaded_file.name)
-     st.write(bytes_data) 
-my_bar = st.progress(0)
-for percent_complete in range(100):
-     time.sleep(0.1)
-     my_bar.progress(percent_complete + 1)
+
     
 
 
