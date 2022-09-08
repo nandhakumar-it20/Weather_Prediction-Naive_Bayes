@@ -7,11 +7,11 @@ st.caption('Predicting Weather using the uploaded csv file')
 st.info("Developed by NANDHAKUMAR S, SUJITH V, MOHAMED RAFEEK S, DHIVAKAR S [Daisi Hackathon]")
 st.snow()
 with st.spinner('Loading...'):
-    time.sleep(3)
+    time.sleep(1.5)
 uploaded_files = st.file_uploader("Choose a CSV file to process", type='csv')
 if uploaded_files is not None:
-     bytes_data = uploaded_file.read()
-     st.write("filename:", uploaded_file.name)
+     bytes_data = uploaded_files.read()
+     st.write("filename:", uploaded_files.name)
 
     
 
