@@ -10,7 +10,6 @@ with st.spinner('Loading...'):
     time.sleep(3)
 uploaded_files = st.file_uploader("Choose a CSV file to process", type='csv')
 if uploaded_files is not None:
-for uploaded_file in uploaded_files:
      bytes_data = uploaded_file.read()
      st.write("filename:", uploaded_file.name)
 
