@@ -1,5 +1,7 @@
 altair==4.2.0
 
+yfinance==0.1.74
+
 attrs==22.1.0
 
 backports.zoneinfo==0.2.1
