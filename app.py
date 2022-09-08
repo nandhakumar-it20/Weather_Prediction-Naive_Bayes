@@ -1,24 +1,23 @@
 import streamlit as st
-import yfinance as yf
 import pandas as pd
+import time
 
-st.title('Stock Market Prediction')
+st.title('Weather Prediction using Python')
+st.header('Predicting Weather using the uploaded csv file')
+st.info("Developed by NANDHAKUMAR S, SUJITH V, MOHAMED RAFEEK S, DHIVAKAR S [Daisi Hackathon]")
+st.snow()
+with st.spinner('Loading...'):
+    time.sleep(3)
+st.success('Done!')
+uploaded_files = st.file_uploader("Choose a CSV file to process", accept_multiple_files=True)
+for uploaded_file in uploaded_files:
+     bytes_data = uploaded_file.read()
+     st.write("filename:", uploaded_file.name)
+     st.write(bytes_data) 
+my_bar = st.progress(0)
+for percent_complete in range(100):
+     time.sleep(0.1)
+     my_bar.progress(percent_complete + 1)
+    
 
-tickers=('TSLA','AAPL','MSFT','BTC-USD','ETH-USD')
 
-dropdown=st.multiselect('Pick your assets',tickers)
-
-start=st.date_input('Start',value =pd.to_datetime('2022-07-03'))
-end=st.date_input('End',value=pd.to_datetime('today'))
-
-def relativeret(df):
-    rel=df.pct_change()
-    cumret=(1+rel).cumprod()-1
-    cumret=cumret.fillna(0)
-    return cumret
-
-
-if len(dropdown)>0:
-   df=relativeret(yf.download(dropdown,start,end)['Adj Close'])
-   st.header('Returns of {}'.format(dropdown))
-   st.line_chart(df)
