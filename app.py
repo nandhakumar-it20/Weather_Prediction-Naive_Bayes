@@ -127,8 +127,8 @@ sns.set()
 mat = confusion_matrix(expected, predicted)
 sns.heatmap(mat, square=True, annot=True, fmt='d', cbar=False,
             xticklabels=['no','yes'], yticklabels=['no','yes'])
-plt.xlabel('predicted label')
-plt.ylabel('actual label');  
+st.plt.xlabel('predicted label')
+st.plt.ylabel('actual label');  
     
     
     
