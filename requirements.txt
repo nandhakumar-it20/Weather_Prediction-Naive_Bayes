@@ -122,5 +122,5 @@ wheel==0.37.1
 
 zipp==3.8.1
 
-seaborn==12.0
+seaborn==11.2
 
