@@ -32,9 +32,8 @@ def st_ui():
         st.write("Leader   : NANDHAKUMAR S")
         st.write("Member 1 : SUJITH V")
         st.write("Member 2 : MOHAMED RAFEEK S")
-        st.write("")
         st.write("Do visit our [Github Repository](https://github.com/nandhakumars4757/Weather_Prediction)")
-   
+        st.write("")  
 weather = datasets.fetch_openml(name='weather', version=2)
 st.write('Features:',   weather.feature_names)
 st.write('Target(s):',  weather.target_names)
