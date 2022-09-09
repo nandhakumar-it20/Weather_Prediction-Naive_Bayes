@@ -23,6 +23,22 @@ st.title('Weather Prediction using Python')
 st.caption('Predicting Weather using the dataset fetched from openml')
 st.info("Developed by NANDHAKUMAR S, SUJITH V, MOHAMED RAFEEK S[Team MIDNIGHT HACKER]")
 st.snow()  
+def st_ui():
+    
+    with st.sidebar:
+        st.image("WEATHER.jpg")
+        st.header("TEAM MIDNIGHT HACKER")
+        st.write("Leader   : NANDHAKUMAR S")
+        st.write("Member 1 : SUJITH V")
+        st.write("Member 2 : MOHAMED RAFEEK S")
+        st.subheader("**_Do you like our Project_?**")
+        col1, col2 = st.columns([2,2])
+        with col1:
+            if st.button('Yes'):
+                st.write('Thanks for your valuable feedback...')
+        with col2:
+            if st.button('No'):
+                st.write('Will update our app soon...')
 with st.spinner('Loading...'):
     time.sleep(2)   
 weather = datasets.fetch_openml(name='weather', version=2)
@@ -128,22 +144,7 @@ st.write('Metrics =', metrics.precision_recall_fscore_support(expected, predicte
 st.write('\nPERFORMANCE REPORT:\n')
 st.write(metrics.classification_report(expected, predicted))
  
-def st_ui():
-    
-    with st.sidebar:
-        st.image("WEATHER.jpg")
-        st.header("TEAM MIDNIGHT HACKER")
-        st.write("Leader   : NANDHAKUMAR S")
-        st.write("Member 1 : SUJITH V")
-        st.write("Member 2 : MOHAMED RAFEEK S")
-        st.subheader("**_Do you like our Project_?**")
-        col1, col2 = st.columns([2,2])
-        with col1:
-            if st.button('Yes'):
-                st.write('Thanks for your valuable feedback...')
-        with col2:
-            if st.button('No'):
-                st.write('Will update our app soon...')
+
     
     
             
