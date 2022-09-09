@@ -9,7 +9,7 @@ from sklearn.datasets import fetch_openml
 import seaborn as sns; 
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
-def st_ui():
+
 def add_bg_from_url():
     st.markdown(f"""
          <style>
@@ -128,7 +128,7 @@ st.write('Metrics =', metrics.precision_recall_fscore_support(expected, predicte
 st.write('\nPERFORMANCE REPORT:\n')
 st.write(metrics.classification_report(expected, predicted))
  
-    
+def st_ui():   
 with st.sidebar:
     st.image("WEATHER.jpeg")
     st.header("TEAM MIDNIGHT HACKER")
