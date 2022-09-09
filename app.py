@@ -21,7 +21,7 @@ def add_bg_from_url():
 add_bg_from_url() 
 st.title('Weather Prediction using Python')
 st.caption('Predicting Weather using the dataset fetched from openml')
-st.info("Developed by NANDHAKUMAR S, SUJITH V, MOHAMED RAFEEK S[Team MIDNIGHT HACKER]", icon="©")
+st.info("Developed by NANDHAKUMAR S, SUJITH V, MOHAMED RAFEEK S [Team MIDNIGHT HACKER]", icon="©")
 st.subheader('Prediction')
 st.snow()  
 def st_ui():
@@ -40,8 +40,7 @@ def st_ui():
         with col2:
             if st.button('No'):
                 st.write('Will update our app soon...')
-with st.spinner('Loading...'):
-    time.sleep(2)   
+   
 weather = datasets.fetch_openml(name='weather', version=2)
 st.write('Features:',   weather.feature_names)
 st.write('Target(s):',  weather.target_names)
