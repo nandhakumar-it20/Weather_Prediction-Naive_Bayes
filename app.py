@@ -142,7 +142,7 @@ st.write('Recall =', metrics.recall_score(expected, predicted, average=None))
 st.write()
 st.write('Metrics =', metrics.precision_recall_fscore_support(expected, predicted, average=None))
 st.write('\nPERFORMANCE REPORT:\n')
-st.table(metrics.classification_report(expected, predicted))
+st.write(metrics.classification_report(expected, predicted))
 print('CONFUSION MATRIX:\n')
 mat = confusion_matrix(expected, predicted)
 sns.heatmap(mat, square=True, annot=True, fmt='d', cbar=False,
