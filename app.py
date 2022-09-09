@@ -32,14 +32,6 @@ def st_ui():
         st.write("Leader   : NANDHAKUMAR S")
         st.write("Member 1 : SUJITH V")
         st.write("Member 2 : MOHAMED RAFEEK S")
-        st.subheader("**_Do you like our Project_?**")
-        col1, col2 = st.columns([2,2])
-        with col1:
-            if st.button('Yes'):
-                st.write('Thanks for your valuable feedback...')
-        with col2:
-            if st.button('No'):
-                st.write('Will update our app soon...')
    
 weather = datasets.fetch_openml(name='weather', version=2)
 st.write('Features:',   weather.feature_names)
