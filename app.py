@@ -9,7 +9,7 @@ from sklearn.datasets import fetch_openml
 import seaborn as sns; 
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
-
+def st_ui():
 def add_bg_from_url():
     st.markdown(f"""
          <style>
@@ -145,6 +145,9 @@ with st.sidebar:
             st.write('Will update our app soon...')
     
     
+            
+if __name__ == "__main__":
+    st_ui()
     
     
     
