@@ -131,7 +131,7 @@ st.write(metrics.classification_report(expected, predicted))
 def st_ui():
     
     with st.sidebar:
-        st.image("WEATHER.jpeg")
+        st.image("WEATHER.jpg")
         st.header("TEAM MIDNIGHT HACKER")
         st.write("Leader   : NANDHAKUMAR S")
         st.write("Member 1 : SUJITH V")
