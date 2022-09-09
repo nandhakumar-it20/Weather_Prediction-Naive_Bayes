@@ -10,14 +10,21 @@ import seaborn as sns;
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 
-with st.spinner('Loading...'):
-    time.sleep(1)
+def add_bg_from_url():
+    st.markdown(f"""
+         <style>
+         .stApp {{
+             background-image: url("https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=740&t=st=1662727181~exp=1662727781~hmac=90b82f522780689758d61e659e73a479d5f69fd41bd28b2b2347fe4bad061891");
+             background-attachment: fixed;
+             background-size: cover}}
+             </style>""",unsafe_allow_html=True)
+add_bg_from_url() 
 st.title('Weather Prediction using Python')
 st.caption('Predicting Weather using the dataset fetched from openml')
-st.info("Developed by NANDHAKUMAR S, SUJITH V, MOHAMED RAFEEK S, DHIVAKAR S [Daisi Hackathon]")
-st.snow()
-  
-    
+st.info("Developed by NANDHAKUMAR S, SUJITH V, MOHAMED RAFEEK S[Team MIDNIGHT HACKER]")
+st.snow()  
+with st.spinner('Loading...'):
+    time.sleep(2)   
 weather = datasets.fetch_openml(name='weather', version=2)
 st.write('Features:',   weather.feature_names)
 st.write('Target(s):',  weather.target_names)
