@@ -1,6 +1,7 @@
 # Weather Prediction using Python
 We have developed a 'Weather Prediction - Naive bayes' project using Naive Bayes Classification Algorithm in Python for the Daisi Hackathon (via Hackerearth)
 ### Team Details:
+#### Team Name: MIDNIGHT HACKER
 #### Team Leader: NANDHAKUMAR S 
 #### Members: SUJITH V, MOHAMED RAFEEK S
 #### Designation: Student at BANNARI AMMAN INSTITUTE OF TECHNOLOGY, SATHYAMANGALAM.
