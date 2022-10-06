@@ -10,6 +10,23 @@ import seaborn as sns;
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 
+from threading import Thread
+
+def request_search_terms(*args):
+    #weather_prediction_naive_bayes.add_bg_from_url().value
+    pass
+
+#...
+
+threads = []
+for st in searchTerms:
+    threads.append (Thread (target=request_search_terms, args=(st,)))
+    threads[-1].start()
+
+for t in threads:
+    t.join();
+
+
 def add_bg_from_url():
     st.markdown(f"""
          <style>
