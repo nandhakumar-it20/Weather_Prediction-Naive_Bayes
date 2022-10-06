@@ -13,10 +13,10 @@ from sklearn.metrics import confusion_matrix
 from threading import Thread
 
 def request_search_terms(*args):
-    #weather_prediction_naive_bayes.add_bg_from_url().value
+    """weather_prediction_naive_bayes.add_bg_from_url().value"""
     pass
 
-#...
+...
 
 threads = []
 for st in searchTerms:
