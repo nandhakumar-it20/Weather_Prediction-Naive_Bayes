@@ -3,10 +3,10 @@ We have developed a 'Weather Prediction - Naive bayes' project using Naive Bayes
 ### Team Details:
 #### Team Name: MIDNIGHT HACKER
 #### Team Leader: NANDHAKUMAR S 
-#### Members: SUJITH V, MOHAMED RAFEEK S
+#### Members: SUJITH V, MOHAMED FARHUN M
 #### Designation: Student at BANNARI AMMAN INSTITUTE OF TECHNOLOGY, SATHYAMANGALAM.
 #### Contact: +919488393947
-#### Mail: nandhakumarshanmugam.udt.4757@gmail.com
+#### Mail: nandhakumarshanmugam.udt.4757@gmail.com (or) nandhakumar.it20@bitsathy.ac.in
 
 ## What we used......
 • Daisi
