@@ -50,9 +50,9 @@ def st_ui():
         st.image("W.jpg")
         st.header("A PROJECT BY NANDHAKUMAR S")
         st.write("")  
-weather = datasets.fetch_openml(name='weather', version=2)
-st.write('Features:',   weather.feature_names)
-st.write('Target(s):',  weather.target_names)
+        weather = datasets.fetch_openml(name='weather', version=2)
+        st.write('Features:',   weather.feature_names)
+        st.write('Target(s):',  weather.target_names)
 
 
 df = pd.DataFrame( np.c_[weather.data, weather.target],columns=np.append(weather.feature_names, weather.target_names) )
