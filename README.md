@@ -3,15 +3,11 @@ We have developed a 'Weather Prediction - Naive bayes' project using Naive Bayes
 ### Team Details:
 #### Team Name: MIDNIGHT HACKER
 #### Team Leader: NANDHAKUMAR S 
-#### Members: SUJITH V, MOHAMED FARHUN M
 #### Designation: Student at BANNARI AMMAN INSTITUTE OF TECHNOLOGY, SATHYAMANGALAM.
 #### Contact: +919488393947
-#### Mail: nandhakumarshanmugam.udt.4757@gmail.com (or) nandhakumar.it20@bitsathy.ac.in
+#### Mail:  nandhakumar.it20@bitsathy.ac.in
 
 ## What we used......
-• Daisi
-
-
 • Streamlit UI
 
 
@@ -30,7 +26,7 @@ We have developed a 'Weather Prediction - Naive bayes' project using Naive Bayes
 • matplotlib
 
 
-#### We have done our project in the daisi platform (https://app.daisi.io/) using Streamlit UI. We used Naive Bayes Classification Algorithm to predict the weather. We used weather dataset from openml. 
+#### I have done this project using Streamlit UI. I used Naive Bayes Classification Algorithm to predict the weather. I used weather dataset from openml. 
 ## Features
 • Predicting Weather
 
