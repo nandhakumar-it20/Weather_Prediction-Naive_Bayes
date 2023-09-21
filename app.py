@@ -38,18 +38,14 @@ def add_bg_from_url():
 add_bg_from_url() 
 st.title('Weather Prediction using Python')
 st.caption('Predicting Weather using the dataset fetched from openml')
-st.info("Developed by NANDHAKUMAR S, SUJITH V, MOHAMED RAFEEK S [Team MIDNIGHT HACKER]", icon="©")
+st.info("Developed by NANDHAKUMAR S", icon="©")
 st.subheader('Prediction')
 st.snow()  
 def st_ui():
     
     with st.sidebar:
         st.image("W.jpg")
-        st.header("TEAM MIDNIGHT HACKER")
-        st.write("Leader   : NANDHAKUMAR S")
-        st.write("Member 1 : SUJITH V")
-        st.write("Member 2 : MOHAMED RAFEEK S")
-        st.write("Do visit our [Github Repository](https://github.com/nandhakumars4757/Weather_Prediction)")
+        st.header("A PROJECT BY NANDHAKUMAR S")
         st.write("")  
 weather = datasets.fetch_openml(name='weather', version=2)
 st.write('Features:',   weather.feature_names)
