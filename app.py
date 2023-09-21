@@ -41,11 +41,11 @@ def add_bg_from_url():
 
   
 def st_ui():
-st.title('Weather Prediction using Python')
-st.caption('Predicting Weather using the dataset fetched from openml')
-st.info("Developed by NANDHAKUMAR S", icon="©")
-st.subheader('Prediction')
-st.snow()    
+    st.title('Weather Prediction using Python')
+    st.caption('Predicting Weather using the dataset fetched from openml')
+    st.info("Developed by NANDHAKUMAR S", icon="©")
+    st.subheader('Prediction')
+    st.snow()    
     with st.sidebar:
         st.image("W.jpg")
         st.header("A PROJECT BY NANDHAKUMAR S")
