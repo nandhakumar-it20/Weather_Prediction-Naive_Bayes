@@ -39,13 +39,13 @@ def add_bg_from_url():
              background-size: cover}}
              </style>""",unsafe_allow_html=True)
 
+  
+def st_ui():
 st.title('Weather Prediction using Python')
 st.caption('Predicting Weather using the dataset fetched from openml')
 st.info("Developed by NANDHAKUMAR S", icon="©")
 st.subheader('Prediction')
-st.snow()  
-def st_ui():
-    
+st.snow()    
     with st.sidebar:
         st.image("W.jpg")
         st.header("A PROJECT BY NANDHAKUMAR S")
