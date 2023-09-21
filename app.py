@@ -8,6 +8,9 @@ from sklearn.naive_bayes import GaussianNB, MultinomialNB
 from sklearn.datasets import fetch_openml
 import seaborn as sns; 
 import matplotlib.pyplot as plt
+import threading
+import concurrent.futures
+
 from sklearn.metrics import confusion_matrix
 
 from threading import Thread
@@ -17,7 +20,7 @@ def request_search_terms(*args):
     pass
 
 ...
-
+searchTerms = ["python", "machine learning", "artificial intelligence"]
 threads = []
 for st in searchTerms:
     threads.append (Thread (target=request_search_terms, args=(st,)))
